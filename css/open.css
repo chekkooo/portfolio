@@ -1,0 +1,159 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'PFStardust';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/PFStardust.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'DOSGothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSGothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+
+.blind { 
+    position:absolute; 
+    top:-99999px; 
+    left:-99999px; 
+    font-size:1px; 
+    line-height:1px; 
+    width:1px; 
+    height:1px; 
+    overflow:hidden;
+}
+
+
+body {
+    font-family: 'MinSans-Medium';
+    }
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color:#303030
+}
+main {
+    width:100%; 
+    height:100vh; 
+    display:flex;
+}
+p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+#wrap {
+    position: absolute;
+    width:100%;
+    height:100vh; 
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background {}
+.background img {
+    width:100%; 
+    height:100vh; 
+} 
+
+.animation {
+    width:100%; 
+    height:400px;
+    position: absolute;
+    bottom:0;
+    left: 0;
+}
+.animation .cloud , .animation .cloud2 {
+    position: absolute;
+    width:120%;
+    bottom: 0;
+    z-index: 1;
+}
+.animation .cloud {
+    left:0%;
+}
+.animation .cloud2 {
+   right: -100%;
+}
+.animation .hills , .animation .hills2 {
+    position: absolute;
+    width:120%;
+    bottom: 0%;
+}
+.animation .hills {
+    left:0%;
+}
+.animation .hills2 {
+    right: -100% ;
+}
+
+.open {
+    width:1200px;
+    overflow: hidden;
+    margin: auto;
+    text-align: center;
+}
+.open .main_name img{
+    max-width: 800px;
+    position: absolute;
+    left:50%;
+    transform: translate(-50%) ; 
+    top:20%;
+}
+.open .main_name img:nth-child(1){
+    top:21%;
+}
+
+
+
+.open .press {
+    position: absolute;
+    bottom: 350px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.open .press img:nth-child(1){
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: 60px;
+    width:15vw;
+}
+.open .press img:nth-child(2){
+    width:40vw;
+}
+
+.open .start {
+    position: absolute;
+    bottom:200px;
+    left:50%;
+    transform: translate(-50%) ; 
+    width:15vw; 
+    height:8vh;
+    background-image: url('../img/start.png');
+    animation: press 1s infinite;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.open .start:hover {
+    cursor: pointer;
+    background-image: url('../img/start_p.png');
+    animation: none;
+}
+
+
+@keyframes press {
+    49% {background-image: url('../img/start.png');}
+    50% {background-image: url('../img/start_p.png');}
+    99% {background-image: url('../img/start_p.png');}
+    100% {background-image: url('../img/start.png');}
+}
+
